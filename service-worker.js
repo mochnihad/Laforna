@@ -1,4 +1,4 @@
-const CACHE_NAME = "laforma-v2";
+const CACHE_NAME = "laforna-v2";
 
 const FILES_TO_CACHE = [
   "./",
