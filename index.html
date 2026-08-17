@@ -933,5 +933,14 @@ const manifest = {
 };
 document.getElementById("manifestLink").href = "data:application/manifest+json," + encodeURIComponent(JSON.stringify(manifest));
 </script>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("LAFORNA Service Worker aktif"))
+      .catch((error) => console.error("Service Worker gagal:", error));
+  });
+}
+  </script>
 </body>
 </html>
